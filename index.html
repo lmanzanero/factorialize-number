@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Factorialize a number | Free Code Camp basic Algorithm</title>
+</head>
+<style>
+  body {
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: 20px;
+    color: grey;
+    text-align: center;
+  }
+  .container{
+    margin: 0 auto;
+    padding: 10px;
+    background: purple;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 100%;
+}
+.result{
+  /*background-color: rgba(255, 111, 222, 0.2);*/
+  margin: 4px;
+  width: 100%;
+}
+.result p {
+  font-size: 35px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+}
+footer p {
+  font-size: 15px;
+}
+</style>
+<body>
+  <div class="container">
+    <h3>Factoralize a number</h3>
+
+     <input class="input" type="number" value="" placeholder="Enter a number">
+
+   <div class="result">
+
+   </div>
+   <footer>
+     <p>| Free Code Camp basic Algorithm |<p>
+   </footer>
+  </div>
+  <script type="text/javascript">
+    let input = document.querySelector('.input');
+    let resultDiv = document.querySelector('.result');
+    function getInputVal(){
+      let inputVal = input.value;
+      factoralizeNum(inputVal);
+    }
+    function factoralizeNum(inputVal){
+      let inputNum = inputVal;
+      // for (var i = inputNum; i > 0; i--) {
+      //   let newVal = inputNum*i;
+      //   resultDiv.innerHTML = `<p>${newVal}</p>`;
+      // }
+      for (var i = 1; i < inputNum; i++) {
+       console.log(i*inputNum);
+       resultDiv.innerHTML = `<p>${i*inputNum}</p>`;
+      }
+
+    }
+    input.addEventListener('input', getInputVal);
+  </script>
+</body>
+</html>
