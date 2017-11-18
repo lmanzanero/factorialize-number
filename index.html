@@ -11,7 +11,7 @@
     font-weight: lighter;
     font-family: monospace;
     font-size: 20px;
-    color: grey;
+    color: #fff;
     text-align: center;
   }
   .container{
@@ -55,8 +55,9 @@ footer p {
 <body>
   <div class="container">
     <h3>Factoralize a number</h3>
-
-     <input class="input" type="number" value="" placeholder="Enter a number">
+    <div class="input-group">
+      <input class="input" type="text" value="" placeholder="Enter a number"><span class="input-group-addon" id="basic-addon">!</span>
+    </div>
 
    <div class="result">
 
@@ -78,10 +79,10 @@ footer p {
       //   let newVal = inputNum*i;
       //   resultDiv.innerHTML = `<p>${newVal}</p>`;
       // }
-      for (var i = 1; i < inputNum; i++) {
-       console.log(i*inputNum);
-       resultDiv.innerHTML = `<p>${i*inputNum}</p>`;
-      }
+      factorial = 1;
+       for (var i = 2; i <= inputNum; i++) {
+        resultDiv.innerHTML = `<p>${factorial = factorial * i}</p>`;
+       }
 
     }
     input.addEventListener('input', getInputVal);
